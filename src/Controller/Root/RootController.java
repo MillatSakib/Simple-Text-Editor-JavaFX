@@ -32,7 +32,7 @@ public class RootController implements Initializable {
     private void fileOpenHandler(ActionEvent event) throws FileNotFoundException{
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(null);
-        
+        if(file==null) return;
         Scanner sc = new Scanner(file);
         
         String str = "";
@@ -48,6 +48,7 @@ public class RootController implements Initializable {
     private void fileSaveHandle(ActionEvent event)throws Exception{
     FileChooser fileChooser= new FileChooser();
     File file = fileChooser.showSaveDialog(null);
+    if(file==null) return;
     
     String str = textAreaID.getText();
         FileWriter fileWriter = new FileWriter(file);
