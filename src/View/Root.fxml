@@ -14,7 +14,7 @@
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#fileOpenHandler" style="-fx-padding: 0 10px;" text="Open" />
                   <MenuItem mnemonicParsing="false" style="-fx-padding: 0 10px;" text="New" />
-                  <MenuItem mnemonicParsing="false" style="-fx-padding: 0 10px;" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#fileSaveHandle" style="-fx-padding: 0 10px;" text="Save" />
                   <MenuItem mnemonicParsing="false" onAction="#handleClose" style="-fx-padding: 0 10px;" text="Close" />
             </items>
           </Menu>

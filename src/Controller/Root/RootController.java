@@ -6,6 +6,7 @@ package Controller.Root;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -43,6 +44,17 @@ public class RootController implements Initializable {
     }
     @FXML
     private void handleClose(){}
+    @FXML
+    private void fileSaveHandle(ActionEvent event)throws Exception{
+    FileChooser fileChooser= new FileChooser();
+    File file = fileChooser.showSaveDialog(null);
+    
+    String str = textAreaID.getText();
+        FileWriter fileWriter = new FileWriter(file);
+        fileWriter.write(str);
+        fileWriter.close();
+    
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
